@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formula Truck - Site Responsivo</title>
+    <style>
+        /* Resetando margens e preenchimentos */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1b1b1b;
+            color: white;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #333;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #ff9900;
+        }
+
+        /* Navegação */
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 15px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ff9900;
+        }
+
+        /* Layout principal */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            justify-content: space-between;
+        }
+
+        .section {
+            flex: 1;
+            padding: 15px;
+            margin: 10px;
+            background-color: #555;
+            border-radius: 8px;
+        }
+
+        .section h2 {
+            color: #ff9900;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Estilo de footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 20px;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Estilo de botão */
+        .button {
+            background-color: #ff9900;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #cc7a00;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Formula Truck - O Mundo dos Caminhões</h1>
+</header>
+
+<nav>
+    <a href="#inicio">Início</a>
+    <a href="#noticias">Notícias</a>
+    <a href="#pilotos">Pilotos</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<div class="container">
+    <section class="section" id="inicio">
+        <h2>Bem-vindo ao Formula Truck</h2>
+        <p>O Formula Truck é a competição mais emocionante de caminhões, onde pilotos enfrentam desafios e muita velocidade nas pistas.</p>
+        <button class="button" onclick="showMessage()">Saiba Mais</button>
+    </section>
+
+    <section class="section" id="noticias">
+        <h2>Últimas Notícias</h2>
+        <ul>
+            <li>O Campeonato de 2025 começou com uma grande vitória!</li>
+            <li>Nova temporada trará novos desafios para os pilotos.</li>
+            <li>Caminhão da temporada foi eleito: Confira os detalhes!</li>
+        </ul>
+    </section>
+
+    <section class="section" id="pilotos">
+        <h2>Pilotos Destaque</h2>
+        <p>Conheça alguns dos maiores pilotos que dominaram a competição!</p>
+        <ul>
+            <li>José Silva - Campeão 2024</li>
+            <li>Maria Oliveira - Revelação de 2023</li>
+            <li>Carlos Henrique - Competidor veterano</li>
+        </ul>
+    </section>
+
+    <section class="section" id="contato">
+        <h2>Entre em Contato</h2>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Seu e-mail" required><br><br>
+            <button type="submit" class="button">Enviar</button>
+        </form>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2025 Formula Truck. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    // Função para exibir uma mensagem de alerta quando o botão "Saiba Mais" for clicado
+    function showMessage() {
+        alert("O Formula Truck é um campeonato internacional de caminhões de corrida. Fique ligado nas próximas corridas!");
+    }
+</script>
+
+</body>
+</html>
